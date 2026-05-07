@@ -1,0 +1,8 @@
+services:
+  rag_app:
+    build: .
+    container_name: local_rag_system
+    volumes:
+      - .:/app
+    environment:
+      - VOCAB_CACHE=/app/chroma_db/tfidf_vocab.pkl
